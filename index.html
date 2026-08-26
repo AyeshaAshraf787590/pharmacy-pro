@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>PharmacyPro - Your Trusted Online Pharmacy</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body><header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">💊</div>
+      <span>Pharmacy<span style="color:var(--primary)">Pro</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="products.html" class="nav-products">Products</a>
+      <a href="categories.html" class="nav-categories">Categories</a>
+      <a href="about.html" class="nav-about">About</a>
+      <a href="services.html" class="nav-services">Services</a>
+      <a href="contact.html" class="nav-contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-bar">
+        <i>🔍</i>
+        <input type="text" id="globalSearch" placeholder="Search medicines...">
+      </div>
+      <a href="cart.html" class="icon-btn" title="Cart">
+        🛒<span class="badge" id="cartBadge">0</span>
+      </a>
+      <a href="auth.html" class="icon-btn" title="Account" id="authBtn">
+        👤
+      </a>
+      <div class="user-menu hidden" id="userMenu">
+        <div class="user-avatar" id="userAvatar">U</div>
+        <span id="userName">User</span>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header><section class="hero"><div class="hero-pattern"></div><div class="hero-content"><div class="hero-text"><h1>Your Health, <span>Our Priority</span></h1><p>Get genuine medicines, health products & wellness essentials delivered to your door. Up to 50% off on your first order!</p><div class="hero-badges"><span class="hero-badge">✅ 100% Genuine</span><span class="hero-badge">🚚 Free Delivery</span><span class="hero-badge">💰 Best Prices</span></div><div style="display:flex;gap:16px"><a href="products.html" class="btn btn-primary btn-lg">Shop Now →</a><a href="categories.html" class="btn btn-secondary btn-lg">Browse Categories</a></div></div><div class="hero-image"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&auto=format&fit=crop" alt="Pharmacy"><div class="hero-float-card card-1"><div class="icon">💊</div><div class="text"><h4>5000+ Products</h4><p>Available in stock</p></div></div><div class="hero-float-card card-2"><div class="icon">⭐</div><div class="text"><h4>4.9 Rating</h4><p>From 10K+ customers</p></div></div></div></div></section><section class="section"><div class="section-header"><h2>Shop by <span>Category</span></h2><p>Find everything you need for your health and wellness</p></div><div class="categories-grid"><div class="category-card" onclick="location.href='products.html?cat=medicines'"><div class="icon">💊</div><h3>Medicines</h3><p>120+ Products</p></div><div class="category-card" onclick="location.href='products.html?cat=vitamins'"><div class="icon">🍊</div><h3>Vitamins</h3><p>80+ Products</p></div><div class="category-card" onclick="location.href='products.html?cat=personal-care'"><div class="icon">🧴</div><h3>Personal Care</h3><p>150+ Products</p></div><div class="category-card" onclick="location.href='products.html?cat=health-devices'"><div class="icon">🩺</div><h3>Health Devices</h3><p>45+ Products</p></div><div class="category-card" onclick="location.href='products.html?cat=baby-care'"><div class="icon">👶</div><h3>Baby Care</h3><p>60+ Products</p></div><div class="category-card" onclick="location.href='products.html?cat=ayurveda'"><div class="icon">🌿</div><h3>Ayurveda</h3><p>90+ Products</p></div></div></section><section class="section" style="background:var(--white);margin:0;padding:80px 24px"><div class="section-header"><h2>Featured <span>Products</span></h2><p>Handpicked best sellers with amazing discounts</p></div><div class="products-grid" id="featuredProducts"></div><div class="text-center" style="margin-top:40px"><a href="products.html" class="btn btn-dark btn-lg">View All Products →</a></div></section><section class="section"><div class="section-header"><h2>What Our <span>Customers Say</span></h2><p>Real reviews from real people who trust us</p></div><div class="products-grid" id="testimonials"><div class="product-card" style="padding:32px;text-align:center"><div style="font-size:3rem;margin-bottom:16px">👤</div><div class="stars" style="margin-bottom:12px">⭐⭐⭐⭐⭐</div><p style="color:var(--gray);margin-bottom:16px;font-style:italic">"Fast delivery and genuine products. PharmacyPro has become my go-to for all medicines. Highly recommended!"</p><h4 style="font-weight:700">Rahul Sharma</h4><p style="font-size:0.85rem;color:var(--gray)">Delhi, India</p></div><div class="product-card" style="padding:32px;text-align:center"><div style="font-size:3rem;margin-bottom:16px">👤</div><div class="stars" style="margin-bottom:12px">⭐⭐⭐⭐⭐</div><p style="color:var(--gray);margin-bottom:16px;font-style:italic">"Excellent customer service and great prices. The app is very easy to use. Saved a lot on my monthly medicines."</p><h4 style="font-weight:700">Priya Patel</h4><p style="font-size:0.85rem;color:var(--gray)">Mumbai, India</p></div><div class="product-card" style="padding:32px;text-align:center"><div style="font-size:3rem;margin-bottom:16px">👤</div><div class="stars" style="margin-bottom:12px">⭐⭐⭐⭐⭐</div><p style="color:var(--gray);margin-bottom:16px;font-style:italic">"I order vitamins every month. The subscription feature is amazing and the packaging is always secure."</p><h4 style="font-weight:700">Amit Kumar</h4><p style="font-size:0.85rem;color:var(--gray)">Bangalore, India</p></div></div></section><footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>💊 PharmacyPro</h3>
+      <p>Your trusted online pharmacy for quality medicines, health products, and wellness solutions delivered to your doorstep.</p>
+      <div class="footer-social">
+        <a href="#">📘</a><a href="#">🐦</a><a href="#">📸</a><a href="#">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="contact.html">Contact Us</a>
+      <a href="services.html">Services</a>
+      <a href="orders.html">Track Order</a>
+      <a href="auth.html">My Account</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Return Policy</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 PharmacyPro. All rights reserved. Licensed Pharmacy.</p>
+  </div>
+</footer>
+<div class="toast-container" id="toastContainer"></div>
+<div class="modal-overlay" id="quickViewModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Quick View</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div><script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script><script>document.querySelector(".nav-home").classList.add("active");renderFeaturedProducts();</script></body></html>

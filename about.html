@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>About Us - PharmacyPro</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body><header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">💊</div>
+      <span>Pharmacy<span style="color:var(--primary)">Pro</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="products.html" class="nav-products">Products</a>
+      <a href="categories.html" class="nav-categories">Categories</a>
+      <a href="about.html" class="nav-about">About</a>
+      <a href="services.html" class="nav-services">Services</a>
+      <a href="contact.html" class="nav-contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-bar">
+        <i>🔍</i>
+        <input type="text" id="globalSearch" placeholder="Search medicines...">
+      </div>
+      <a href="cart.html" class="icon-btn" title="Cart">
+        🛒<span class="badge" id="cartBadge">0</span>
+      </a>
+      <a href="auth.html" class="icon-btn" title="Account" id="authBtn">
+        👤
+      </a>
+      <div class="user-menu hidden" id="userMenu">
+        <div class="user-avatar" id="userAvatar">U</div>
+        <span id="userName">User</span>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header><section class="about-hero"><h1>About <span style="color:var(--primary)">PharmacyPro</span></h1><p>We are on a mission to make healthcare accessible, affordable, and convenient for everyone across India.</p></section><div class="stats-grid"><div class="stat-card"><h3>50K+</h3><p>Happy Customers</p></div><div class="stat-card"><h3>5000+</h3><p>Products</p></div><div class="stat-card"><h3>25+</h3><p>Cities Covered</p></div><div class="stat-card"><h3>4.9★</h3><p>Average Rating</p></div></div><section class="section"><div class="section-header"><h2>Our <span>Story</span></h2></div><div style="max-width:800px;margin:0 auto;text-align:center"><p style="color:var(--gray);font-size:1.05rem;line-height:1.8;margin-bottom:24px">Founded in 2020, PharmacyPro started with a simple idea - everyone deserves access to quality healthcare products without the hassle of visiting multiple stores. What began as a small online pharmacy in Delhi has now grown into one of India's most trusted health platforms.</p><p style="color:var(--gray);font-size:1.05rem;line-height:1.8">We partner directly with licensed manufacturers and distributors to ensure 100% genuine products at the best prices. Our team of pharmacists and healthcare experts work round the clock to verify every product before it reaches you.</p></div></section><section class="section"><div class="section-header"><h2>Meet Our <span>Team</span></h2><p>The people behind your trusted pharmacy</p></div><div class="team-grid"><div class="team-card"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop" alt="CEO"><h3>Dr. Rajesh Gupta</h3><p>Founder & CEO</p><div class="team-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a></div></div><div class="team-card"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop" alt="COO"><h3>Dr. Priya Sharma</h3><p>Chief Pharmacist</p><div class="team-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a></div></div><div class="team-card"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop" alt="CTO"><h3>Amit Verma</h3><p>Head of Technology</p><div class="team-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a></div></div><div class="team-card"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop" alt="CMO"><h3>Sneha Patel</h3><p>Marketing Director</p><div class="team-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a></div></div></div></section><footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>💊 PharmacyPro</h3>
+      <p>Your trusted online pharmacy for quality medicines, health products, and wellness solutions delivered to your doorstep.</p>
+      <div class="footer-social">
+        <a href="#">📘</a><a href="#">🐦</a><a href="#">📸</a><a href="#">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="contact.html">Contact Us</a>
+      <a href="services.html">Services</a>
+      <a href="orders.html">Track Order</a>
+      <a href="auth.html">My Account</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Return Policy</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 PharmacyPro. All rights reserved. Licensed Pharmacy.</p>
+  </div>
+</footer>
+<div class="toast-container" id="toastContainer"></div>
+<div class="modal-overlay" id="quickViewModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Quick View</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div><script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script><script>document.querySelector(".nav-about").classList.add("active");</script></body></html>

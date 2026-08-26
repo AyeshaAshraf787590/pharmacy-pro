@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Invoice - PharmacyPro</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body><header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">💊</div>
+      <span>Pharmacy<span style="color:var(--primary)">Pro</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="products.html" class="nav-products">Products</a>
+      <a href="categories.html" class="nav-categories">Categories</a>
+      <a href="about.html" class="nav-about">About</a>
+      <a href="services.html" class="nav-services">Services</a>
+      <a href="contact.html" class="nav-contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-bar">
+        <i>🔍</i>
+        <input type="text" id="globalSearch" placeholder="Search medicines...">
+      </div>
+      <a href="cart.html" class="icon-btn" title="Cart">
+        🛒<span class="badge" id="cartBadge">0</span>
+      </a>
+      <a href="auth.html" class="icon-btn" title="Account" id="authBtn">
+        👤
+      </a>
+      <div class="user-menu hidden" id="userMenu">
+        <div class="user-avatar" id="userAvatar">U</div>
+        <span id="userName">User</span>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header><section style="padding:24px"><div style="text-align:right;margin-bottom:20px"><button class="btn btn-dark btn-print" onclick="window.print()">🖨️ Print Invoice</button></div><div class="bill-container" id="billContainer"><div class="bill-header"><h1>💊 PharmacyPro</h1><p>Tax Invoice / Bill of Supply</p></div><div class="bill-body"><div class="bill-row"><div class="bill-col"><h4>Billed To</h4><p id="billCustomer">Customer Name</p><p id="billAddress">Address</p></div><div class="bill-col" style="text-align:right"><h4>Invoice Details</h4><p id="billId">#ORD-00000</p><p id="billDate">Date</p></div></div><table class="bill-table"><thead><tr><th>Product</th><th>Qty</th><th>Price</th><th class="text-right">Total</th></tr></thead><tbody id="billItems"></tbody></table><div class="bill-totals"><div class="bill-total-row"><span>Subtotal</span><span id="billSubtotal">₹0</span></div><div class="bill-total-row"><span>Discount</span><span id="billDiscount">-₹0</span></div><div class="bill-total-row"><span>Delivery</span><span id="billDelivery">₹0</span></div><div class="bill-total-row grand-total"><span>Grand Total</span><span id="billTotal">₹0</span></div></div></div><div class="bill-footer"><p>Thank you for shopping with PharmacyPro!</p><p>GST No: 07AABCU9603R1ZX | FSSAI: 10019064000929</p></div></div></section><footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>💊 PharmacyPro</h3>
+      <p>Your trusted online pharmacy for quality medicines, health products, and wellness solutions delivered to your doorstep.</p>
+      <div class="footer-social">
+        <a href="#">📘</a><a href="#">🐦</a><a href="#">📸</a><a href="#">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="contact.html">Contact Us</a>
+      <a href="services.html">Services</a>
+      <a href="orders.html">Track Order</a>
+      <a href="auth.html">My Account</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Return Policy</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 PharmacyPro. All rights reserved. Licensed Pharmacy.</p>
+  </div>
+</footer>
+<div class="toast-container" id="toastContainer"></div>
+<div class="modal-overlay" id="quickViewModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Quick View</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div><script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script><script>renderBill();</script></body></html>

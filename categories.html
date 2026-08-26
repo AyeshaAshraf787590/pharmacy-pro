@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Categories - PharmacyPro</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body><header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">💊</div>
+      <span>Pharmacy<span style="color:var(--primary)">Pro</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="products.html" class="nav-products">Products</a>
+      <a href="categories.html" class="nav-categories">Categories</a>
+      <a href="about.html" class="nav-about">About</a>
+      <a href="services.html" class="nav-services">Services</a>
+      <a href="contact.html" class="nav-contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-bar">
+        <i>🔍</i>
+        <input type="text" id="globalSearch" placeholder="Search medicines...">
+      </div>
+      <a href="cart.html" class="icon-btn" title="Cart">
+        🛒<span class="badge" id="cartBadge">0</span>
+      </a>
+      <a href="auth.html" class="icon-btn" title="Account" id="authBtn">
+        👤
+      </a>
+      <div class="user-menu hidden" id="userMenu">
+        <div class="user-avatar" id="userAvatar">U</div>
+        <span id="userName">User</span>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header><section class="section"><div class="section-header"><h2>Browse <span>Categories</span></h2><p>Explore our wide range of health and wellness categories</p></div><div class="categories-grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))"><div class="category-card" onclick="location.href='products.html?cat=medicines'"><div class="icon">💊</div><h3>Medicines</h3><p>Over-the-counter and prescription medicines for all common ailments</p></div><div class="category-card" onclick="location.href='products.html?cat=vitamins'"><div class="icon">🍊</div><h3>Vitamins & Supplements</h3><p>Boost your immunity with our range of vitamins and dietary supplements</p></div><div class="category-card" onclick="location.href='products.html?cat=personal-care'"><div class="icon">🧴</div><h3>Personal Care</h3><p>Skincare, haircare, and personal hygiene products</p></div><div class="category-card" onclick="location.href='products.html?cat=health-devices'"><div class="icon">🩺</div><h3>Health Devices</h3><p>BP monitors, thermometers, glucometers and more</p></div><div class="category-card" onclick="location.href='products.html?cat=baby-care'"><div class="icon">👶</div><h3>Baby Care</h3><p>Everything your baby needs - diapers, food, and care products</p></div><div class="category-card" onclick="location.href='products.html?cat=ayurveda'"><div class="icon">🌿</div><h3>Ayurveda & Herbal</h3><p>Traditional Ayurvedic medicines and herbal remedies</p></div><div class="category-card" onclick="location.href='products.html?cat=fitness'"><div class="icon">💪</div><h3>Fitness & Nutrition</h3><p>Protein powders, energy drinks, and fitness supplements</p></div><div class="category-card" onclick="location.href='products.html?cat=sexual-wellness'"><div class="icon">❤️</div><h3>Sexual Wellness</h3><p>Condoms, lubricants, and sexual health products</p></div></div></section><footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>💊 PharmacyPro</h3>
+      <p>Your trusted online pharmacy for quality medicines, health products, and wellness solutions delivered to your doorstep.</p>
+      <div class="footer-social">
+        <a href="#">📘</a><a href="#">🐦</a><a href="#">📸</a><a href="#">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="contact.html">Contact Us</a>
+      <a href="services.html">Services</a>
+      <a href="orders.html">Track Order</a>
+      <a href="auth.html">My Account</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Return Policy</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 PharmacyPro. All rights reserved. Licensed Pharmacy.</p>
+  </div>
+</footer>
+<div class="toast-container" id="toastContainer"></div>
+<div class="modal-overlay" id="quickViewModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Quick View</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div><script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script><script>document.querySelector(".nav-categories").classList.add("active");</script></body></html>
