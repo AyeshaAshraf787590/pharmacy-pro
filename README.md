@@ -21,4 +21,4 @@ Then open `http://localhost:8000` in a browser.
 
 ## Deployment
 
-The project can be deployed directly with GitHub Pages or any static hosting provider. Replace the placeholder values in `js/firebase-config.js` only if Firebase is intentionally configured, and do not commit private credentials.
+The project can be deployed directly with GitHub Pages or any static hosting provider. Replace the placeholder values in `firebase-config.js` only if Firebase is intentionally configured, and do not commit private credentials.
